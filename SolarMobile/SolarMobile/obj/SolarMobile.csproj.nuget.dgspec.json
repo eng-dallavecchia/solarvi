@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\CSharpProjects\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile.csproj": {}
+  },
+  "projects": {
+    "D:\\CSharpProjects\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CSharpProjects\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile.csproj",
+        "projectName": "SolarMobile",
+        "projectPath": "D:\\CSharpProjects\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile.csproj",
+        "packagesPath": "C:\\Users\\Avell B155 MAX\\.nuget\\packages\\",
+        "outputPath": "D:\\CSharpProjects\\SolarMobile\\SolarMobile\\SolarMobile\\SolarMobile\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Avell B155 MAX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[0.6.2, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "Plugin.Multilingual": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Xamarin.Android.Support.v7.AppCompat": {
+              "target": "Package",
+              "version": "[23.4.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.1.0.555618, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

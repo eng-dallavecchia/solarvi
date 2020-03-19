@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms ="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:translator ="clr-namespace:SolarMobile.Helpers"
+             
+             mc:Ignorable="d"
+             x:Class="SolarMobile.Views.SolarPage"
+             x:Name="SolarPagaView"
+             Title="Solar Power Viability"
+             BackgroundColor="White"
+             >
+            
+             
+           
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="0.2">
+            
+            <Label x:Name="countryLabel"
+                   FontSize="50"
+                   TextColor="#039be5"
+                   FontAttributes="Bold"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label x:Name="provinceLabel"
+                   FontSize="25"
+                   TextColor="#039be5"
+                   FontAttributes="Bold"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label x:Name="ghi" Text="{translator:Translate ghiMessage}"
+                   FontSize="20"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="FillAndExpand" 
+                HorizontalTextAlignment="Center"
+                   IsVisible="False"
+                   />
+            
+            <Label Text="{translator:Translate formSpendings }"
+                   FontSize="20"
+                   TextColor="#039be5"
+                   FontAttributes="Bold"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                   
+                   />
+
+
+            <Entry x:Name="energyBill"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   Placeholder="$ 100"
+                   TextColor="#039be5"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   Unfocused="energyBillUnfocused"
+                   />
+                   
+
+                <Label Text="{translator:Translate formFee}"
+                   FontSize="20"
+                   TextColor="#039be5"
+                   FontAttributes="Bold"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                       
+                       />
+
+
+                <Entry x:Name="kwhFee"
+                   FontSize="20"
+                   Placeholder="$ 0.3620"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#039be5"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   Unfocused="kwhFeeUnfocused"
+                       />
+
+                <Label Text="{translator:Translate formCoverage}"
+                   FontSize="20"
+                   TextColor="#039be5"
+                   FontAttributes="Bold"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                       
+                       />
+
+
+                <Entry x:Name="coverage"
+                   FontSize="20"
+                   Placeholder="100 %"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#039be5"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   Unfocused="coverageUnfocused"
+                       />
+
+                <Label x:Name ="generationIntro" Text="{translator:Translate generationMessage}"
+                   FontSize="20"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                IsVisible="False"
+                       
+                       />
+
+                <Label x:Name ="generationTitle" Text="{translator:Translate generationTitle}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                IsVisible="False"
+                       />
+
+                <forms:ChartView x:Name="genChart"
+                                 HeightRequest="150"
+                                 >
+                </forms:ChartView>
+
+                <Label x:Name ="newBillIntro" Text="{translator:Translate revenueMessage}"
+                   FontSize="20"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+               IsVisible="False"
+                       
+                       
+                       />
+
+                    <Label x:Name ="newBillTitle" Text="{translator:Translate revenueTitle}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+               IsVisible="False"
+                       />
+
+                <forms:ChartView x:Name="billChart"
+                                 HeightRequest="150" 
+                                 
+                                 >
+                </forms:ChartView>
+
+                <Label x:Name ="financesIntro" Text="{translator:Translate financesMessage}"
+                   FontSize="20"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                IsVisible="False"
+                       />
+                <Label x:Name ="cashFluxTitle" Text="{translator:Translate cashFluxTitle}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                IsVisible="False"
+                       />
+                <forms:ChartView x:Name="cashFluxChart"
+                                 HeightRequest="150" 
+                                 >
+                </forms:ChartView>
+
+                <Label x:Name ="pieChartIntro" Text="{translator:Translate pieChartMessage}"
+                   FontSize="20"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                IsVisible="False"
+                       >
+                    
+                </Label>
+
+                <Label x:Name ="pieChartTitle" Text="{translator:Translate pieChartTitle}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#039be5"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                IsVisible="False"
+                       
+                       />
+                <forms:ChartView x:Name="pieChart"
+                                 HeightRequest="150" >
+               </forms:ChartView>
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

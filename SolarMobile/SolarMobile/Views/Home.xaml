@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:translator ="clr-namespace:SolarMobile.Helpers"
+             mc:Ignorable="d"
+             x:Class="SolarMobile.Views.Home"
+             Title="Home"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Padding="0.2">
+
+
+            <Image Source="logo.png"
+                   HeightRequest="200"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   />
+            <Label x:Name="homeText" Text="{translator:Translate homeMessage}"
+                   FontSize="20"
+                   TextColor="#039be5"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"/>
+
+            <Button x:Name="startButton"
+                    Text="{translator:Translate startMessage}"
+                    BackgroundColor="#039be5"
+                    BorderColor="#039be5"
+                    TextColor="White"
+                    Clicked="startButtonClicked"
+                    HeightRequest="50"
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
